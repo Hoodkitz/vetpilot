@@ -34,7 +34,7 @@ export default function Home() {
               href="/pricing"
               className="inline-flex h-10 items-center justify-center rounded-full bg-teal-600 px-5 text-sm font-medium text-white transition-colors hover:bg-teal-700"
             >
-              Kostenlos starten
+              Preise ansehen
             </Link>
           </div>
         </div>
@@ -61,7 +61,7 @@ export default function Home() {
                 href="/pricing"
                 className="inline-flex h-12 w-full sm:w-auto items-center justify-center rounded-full bg-teal-600 px-8 text-base font-medium text-white transition-colors hover:bg-teal-700"
               >
-                14 Tage kostenlos testen
+                Preise ansehen
               </Link>
               <a
                 href="#features"
@@ -71,7 +71,7 @@ export default function Home() {
               </a>
             </div>
             <p className="mt-6 text-sm text-stone-500 dark:text-stone-500">
-              Keine Kreditkarte erforderlich · Jederzeit kündbar
+              Monatliche Abrechnung · Kündigung gemäß AGB
             </p>
           </div>
         </div>
@@ -112,7 +112,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-semibold text-stone-900 dark:text-stone-50">Patienten</h3>
               <p className="mt-2 text-sm leading-6 text-stone-600 dark:text-stone-400">
-                Digitale Patientenakten mit Impfstatus, Anamnese und Behandlungsverlauf – sicher und DSGVO-konform.
+                Digitale Patientenakten mit Impfstatus, Anamnese und Behandlungsverlauf.
               </p>
             </div>
 
@@ -125,7 +125,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-semibold text-stone-900 dark:text-stone-50">Termine</h3>
               <p className="mt-2 text-sm leading-6 text-stone-600 dark:text-stone-400">
-                Intelligenter Kalender mit Online-Buchung, Erinnerungen und Pufferzeiten – weniger No-Shows.
+                Kalender mit Online-Buchung und Erinnerungen.
               </p>
             </div>
 
@@ -210,7 +210,6 @@ export default function Home() {
                   "Online-Buchung",
                   "Automatische Erinnerungen",
                   "Prioritäts-Support",
-                  "API-Zugang",
                 ].map((feature) => (
                   <li key={feature} className="flex items-start gap-3 text-sm text-stone-600 dark:text-stone-400">
                     <svg className="h-5 w-5 flex-shrink-0 text-teal-600 dark:text-teal-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
@@ -241,15 +240,15 @@ export default function Home() {
             {[
               {
                 q: "Kann ich jederzeit kündigen?",
-                a: "Ja, Sie können jederzeit kündigen. Es gibt keine Mindestlaufzeit und keine Kündigungsfristen.",
+                a: "[PLATZHALTER: Laufzeit und Kündigungsfrist gemäß AGB eintragen]",
               },
               {
-                q: "Ist meine Daten sicher?",
-                a: "Alle Daten werden DSGVO-konform auf Servern in Deutschland verschlüsselt gespeichert.",
+                q: "Wo werden meine Daten gespeichert?",
+                a: "[PLATZHALTER: Hosting-Standort und Sicherheitsmaßnahmen nach Prüfung eintragen. Siehe Datenschutzerklärung.]",
               },
               {
                 q: "Gibt es eine kostenlose Testphase?",
-                a: "Ja, 14 Tage kostenlos testen – keine Kreditkarte erforderlich.",
+                a: "[PLATZHALTER: Angaben zur Testphase, sofern angeboten]",
               },
               {
                 q: "Wie funktioniert die Stripe-Integration?",
@@ -272,13 +271,13 @@ export default function Home() {
             Bereit, Ihre Praxis zu digitalisieren?
           </h2>
           <p className="mt-4 text-lg text-teal-100">
-            Starten Sie heute mit 14 Tagen kostenlosem Test.
+            Wählen Sie den passenden Plan für Ihre Praxis.
           </p>
           <Link
             href="/pricing"
             className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-white px-8 text-base font-medium text-teal-600 transition-colors hover:bg-teal-50"
           >
-            Jetzt kostenlos starten
+            Preise ansehen
           </Link>
         </div>
       </section>
@@ -295,6 +294,16 @@ export default function Home() {
             </div>
             <p className="text-sm text-stone-500 dark:text-stone-400">
               © 2026 VetPilot. Alle Rechte vorbehalten.
+            </p>
+            <nav className="flex gap-4 text-sm text-stone-500 dark:text-stone-400">
+              <Link href="/impressum" className="hover:underline">Impressum</Link>
+              <Link href="/datenschutz" className="hover:underline">Datenschutz</Link>
+              <Link href="/agb" className="hover:underline">AGB</Link>
+            </nav>
+          </div>
+          <div className="mt-6 text-center text-xs text-stone-500 dark:text-stone-400">
+            <p>
+              Hinweis: VetPilot ist eine Verwaltungssoftware und ersetzt keine tierärztliche Diagnose, Behandlung oder Beratung.
             </p>
           </div>
         </div>

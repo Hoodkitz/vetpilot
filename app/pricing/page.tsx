@@ -27,7 +27,7 @@ export default function PricingPage() {
               Wählen Sie Ihren Plan
             </h1>
             <p className="mt-4 text-lg text-stone-600 dark:text-stone-400">
-              14 Tage kostenlos testen. Keine Kreditkarte erforderlich.
+              Monatliche Abrechnung. Alle Details in den AGB.
             </p>
           </div>
 
@@ -84,7 +84,6 @@ export default function PricingPage() {
                   "Online-Buchung",
                   "Automatische Erinnerungen",
                   "Prioritäts-Support",
-                  "API-Zugang",
                 ].map((feature) => (
                   <li key={feature} className="flex items-start gap-3 text-sm text-stone-600 dark:text-stone-400">
                     <svg className="h-5 w-5 flex-shrink-0 text-teal-600 dark:text-teal-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
