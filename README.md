@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VetPilot
 
-## Getting Started
+Landing Page mit Stripe-Checkout fuer eine Praxissoftware fuer Tierarztpraxen (Next.js, App Router, Tailwind).
 
-First, run the development server:
+## Status
+
+- Landing Page (`app/page.tsx`), Preise (`app/pricing`), Erfolgsseite (`app/success`)
+- Stripe-Checkout (`app/api/checkout`) mit Preis-Allowlist
+- Rechtstexte `/impressum`, `/datenschutz`, `/agb` mit PLATZHALTER-Feldern (vor Livegang ausfuellen und juristisch pruefen)
+- Das eigentliche Produkt (Praxissoftware) existiert noch nicht, nur die Vermarktungsseite
+
+## Entwicklung
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env.local   # Werte eintragen, nie committen
+npm run dev                  # http://localhost:3000
+npm run lint && npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Umgebungsvariablen
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Variable | Zweck |
+|---|---|
+| `STRIPE_SECRET_KEY` | Stripe Secret Key (nur serverseitig) |
+| `STRIPE_PRICE_STARTER`, `STRIPE_PRICE_PROFESSIONAL` | Price-IDs der Pläne |
+| `STRIPE_ALLOWED_PRICE_IDS` | Komma-getrennte Allowlist, muss die Price-IDs oben enthalten |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Vor dem Livegang
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Platzhalter in den Rechtstexten ersetzen
+2. Stripe im Live-Modus einrichten
+3. Domain/Hosting festlegen
